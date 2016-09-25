@@ -1,0 +1,66 @@
+{
+	"id": "ed4db7ca-d9bb-d380-7a62-55f895527b99",
+	"name": "nodejs-aws-es-bulk",
+	"description": "",
+	"order": [
+		"c9eb26a6-618f-07d3-253b-7acd6f5d34e3",
+		"0809f9ab-9a6b-e890-c497-ecdd7787bbf0"
+	],
+	"folders": [],
+	"timestamp": 1474788506686,
+	"owner": "33863",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "0809f9ab-9a6b-e890-c497-ecdd7787bbf0",
+			"headers": "Host: 127.0.0.1\nX-Amz-Date: 20160925T074700Z\nAuthorization: AWS4-HMAC-SHA256 Credential=AKIAJ6VJGYBEFG6Y236Q/20160925/ap-southeast-1/es/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=5b8ebb0083d762f7398d2df63312fbc7761525f466a0d7f536864369c6ffb7a3\nContent-Length: 64\nContent-Type: application/json\n",
+			"url": "127.0.0.1/animal/badger/_search?pretty=true",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "",
+				"region": "ap-southeast-1",
+				"service": "es",
+				"saveToRequest": true
+			},
+			"time": 1474790173040,
+			"name": "nodejs-aws-es-search",
+			"description": "",
+			"collectionId": "ed4db7ca-d9bb-d380-7a62-55f895527b99",
+			"responses": [],
+			"rawModeData": "{\n\t\"query\":{\n\t\t\n\t\t\"match\":{\n\t\t\t\"bido\" :\"software\"\n\t\t\t\n\t\t}\n\t}\n\t\n}"
+		},
+		{
+			"id": "c9eb26a6-618f-07d3-253b-7acd6f5d34e3",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nHost: 127.0.0.1\nX-Amz-Date: 20160925T072755Z\nAuthorization: AWS4-HMAC-SHA256 Credential=AKIAJ6VJGYBEFG6Y236Q/20160925/ap-southeast-1/es/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=98df6cc77d24db70bb10dbf08dc910dcdfc0671e4bba42b1dc275b4302a7b2d6\nContent-Length: 8565\n",
+			"url": "127.0.0.1/animal/badger/_bulk",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "ed4db7ca-d9bb-d380-7a62-55f895527b99",
+			"data": [],
+			"dataMode": "raw",
+			"name": "nodejs-aws-es-bulk",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1474788506686,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "awsSigV4",
+			"helperAttributes": {
+				"accessKey": "",
+				"region": "ap-southeast-1",
+				"service": "es",
+				"saveToRequest": true
+			},
+			"rawModeData": "{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"1\" } }\\n\n{ \"name\" : \"Cain Ullah\", \"role\": \"Founder\", \"bio\": \"Cain is a Founder of Red Badger, the non-techy responsible for business operations. He's worked on lots of innovative projects - from prototype to delivery - for some very big brands. He also likes to clog up the Red Badger mailroom with a constant influx of vinyl purchases to add to his ever-increasing collection.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"2\" } }\\n\n{ \"name\" : \"David Wynne\", \"role\": \"Founder\", \"bio\": \"Founder, developer, and lover (not a hater). David has been making stuff work really well for over 14 years, five of those at Microsoft in the UK, USA and around Europe. He has lead teams, introduced agile into organisations and loves the detail. One day David will write a novel. A really long and interesting one.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"3\" } }\\n\n{ \"name\" : \"Stuart Harris\", \"role\": \"Founder\", \"bio\": \"Stu is a founder with a delivery focus. He ensures that everything we create is both great for the client, and fun and challenging for us. He's been building software for over 25 years and is a passionate leader who drives the technological agnosticism within the company. He spends every moment of his spare time watching Coronation Street.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"4\" } }\\n\n{ \"name\" : \"Jack Hoy\", \"role\": \"Software Engineer\", \"bio\": \"Jack previously worked on the business side of software development and became enamoured with the art of programming after his first taste of Ruby. A keen learner, he's always striving to write better code. Outside of work you may find him (attempting to) lift heavy objects at the gym, dreaming about AI or enjoying some form of house music.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"5\" } }\\n\n{ \"name\" : \"Dario Villanueva\", \"role\": \"User Interface Developer\", \"bio\": \"Dario is really into data visualisation. He likes to count stuff and then make lines out of it, then look at the lines and find patterns. He can also build APIs and make music, in no particular order. He has two terrible addictions: his modular synthesisers and his record collection. He also likes to make visual installations on his arty moments.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"6\" } }\\n\n{ \"name\" : \"Michel Erler\", \"role\": \"Intern Designer\", \"bio\": \"Michel is the youngest badger in the team. As a design intern he is eager to learn new methods, contribute ideas and enhance his skills. When he's not working in the office or at uni he likes to explore other creative fields such as film and music (yeah, a hard-working boy…!)\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"7\" } }\\n\n{ \"name\" : \"Mike Kelly\", \"role\": \"Software Engineer\", \"bio\": \"Mike is an engineer who enjoys finding elegant solutions to interesting problems. His favourite pastimes include; playing squash, drinking posh teas, talking about bitcoins, and impersonating a tea pot.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"8\" } }\\n\n{ \"name\" : \"Sari Griffiths\", \"role\": \"Design Director\", \"bio\": \"With over 10 years' experience in industry, Sari looks after the quality of design output as Design Director of Red Badger. She has a background in branding and bookbinding. She speaks Japanese and loves Lindy Hop (a dance, apparently). She is currently looking for a house with solid floors so that she can do lots of dancing games.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"9\" } }\\n\n{ \"name\" : \"Charles Moore\", \"role\": \"Business Relations\", \"bio\": \"Charles has a passion for helping form and develop business relationships, with a keen eye for detail and a confident approach. When not helping Red Badger build new business you’ll find Chuck playing, watching or talking about some kind of sport or frantically studying various coding language (trying to keep up)!\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"10\" } }\\n\n{ \"name\" : \"Zoe Merchant\", \"role\": \"Head of Marketing\", \"bio\": \"Zoë has been delivering effective marketing for over 15 years across a range of hi-tech and consulting companies. Passionate about delivering results through focused, creative, harmonious and integrated activities that combine to support business goals. She is a fan of etymology (look it up!) and also a scuba dive master who is always thinking about the next big fish she’ll encounter!\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"11\" } }\\n\n{ \"name\" : \"Haro Lee\", \"role\": \"User Interface Developer\", \"bio\": \"Haro is our User Interface and Interactive Developer with cross sector knowledge of rich user interface and back-end technologies. She has vast experience working with rich user interface technologies for a wide variety of clients. Outside of work, Haro spends a large chunk of her spare time wielding a big sword and fighting monsters (virtually).\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"12\" } }\\n\n{ \"name\" : \"Joe Stanton\", \"role\": \"Software Engineer\", \"bio\": \"Joe is the youthful badger. Fresh out of university and eager to apply his technical skills and enthusiasm to create great software, Joe loves to bury his head in the latest technologies. Joe also has a love for burritos and is learning to play the guitar (slowly).\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"13\" } }\\n\n{ \"name\" : \"Mike Altendorf\", \"role\": \"Non-Executive Director\", \"bio\": \"Mike was the former founder of Conchango, one of the UK's most successful digital consultancies and systems integrators. Mike has many years of experience in consulting services and technology, founding Conchango in 1991 and building it into a £45m+ revenue business before it's sale in April 2008. Mike will bring his wealth of experience to advise Red Badger and helping them to grow.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"14\" } }\\n\n{ \"name\" : \"Jon Sharratt\", \"role\": \"Software Engineer\", \"bio\": \"Jon has been bashing keys and writing code for over eight years across the whole gamut of technologies. Having had roles within both consultancy firms and digital agencies, he has a broad depth of software practices and processes. He is also an avid cook who is always looking out for new restaurants and mouthwatering dishes in and around London.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"15\" } }\\n\n{ \"name\" : \"Samera Butt\", \"role\": \"Test Manager\", \"bio\": \"Samera has been working as a functional test engineer for over seven years and is passionate about producing quality software. Consequently, she likes nothing better than researching new methods which can be incorporated into agile testing. Outside of work she loves trying different foods from different cultures. She also likes swimming and going on holiday.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"16\" } }\\n\n{ \"name\" : \"Kenley Tomlin\", \"role\": \"Software Engineer\", \"bio\": \"Kenley lived and worked in South Korea for 7 years. While in Korea he worked as part of the team that designed and built one of South Korea's most popular free mobile games. He has a passion for the latest and greatest technologies. Outside of work he enjoys all manner of sports, watching live football and messing about with motorbikes.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"17\" } }\\n\n{ \"name\" : \"Stephen Fulljames\", \"role\": \"User Interface Developer\", \"bio\": \"The work bit of Stephen's brain is filled with Javascript, Node and the latest front-end development techniques, gathered and evolved over 15 years of building websites. Red Badger's approach to technology and creativity encourages him to never stop learning. Writing, 3D printing, and living by the sea with his wife and kids are the life part of the balance.\" }\\n\n{ \"create\" : { \"_index\" : \"animal\", \"_type\" : \"badger\", \"_id\" : \"18\" } }\\n\n{ \"name\" : \"Les Dawson\", \"role\": \"Non-Executive Director\", \"bio\": \"Les Dawson OBE is a non-executive Director at Red Badger. He is a former CEO of Southern Water and current chairman at John Murphy & Sons. Les was also an Executive Director at United Utilities and was head of operations at Transco. Les has a passion for innovation and will bring his wealth of experience in advising Red Badger and helping them to develop innovative product offerings.\" }\\n"
+		}
+	]
+}
